@@ -4,11 +4,6 @@ WORKDIR /usr/src/node-red
 
 COPY node-red-contrib-covid19api .
 
-# Chown, install devtools & Clean up
-RUN chown -R node-red:root /usr/src/node-red && \
-    /tmp/install_devtools.sh && \
-    rm -r /tmp/*
-
 RUN   chgrp -R 0 /opt/app-root && \
       chgrp -R 0 /usr/src/node-red
       chmod -R g=u /opt/app-root \
