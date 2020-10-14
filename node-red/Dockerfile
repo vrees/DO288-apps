@@ -4,9 +4,7 @@ WORKDIR /usr/src/node-red
 
 COPY node-red-contrib-covid19api .
 
-RUN   chgrp -R 0 /opt/app-root && \
-      chgrp -R 0 /usr/src/node-red
-      chmod -R g=u /opt/app-root \
+RUN   chgrp -R 0 /usr/src/node-red
       chmod -R g=u /usr/src/node-red
 
 RUN npm install ./node-red-contrib-covid19api
