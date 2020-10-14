@@ -4,7 +4,7 @@ WORKDIR /usr/src/node-red
 
 COPY node-red-contrib-covid19api .
 
-RUN npm install ./ node-red-contrib-covid19api
+RUN npm install ./node-red-contrib-covid19api
 
 # Chown, install devtools & Clean up
 RUN chown -R node-red:root /usr/src/node-red && \
